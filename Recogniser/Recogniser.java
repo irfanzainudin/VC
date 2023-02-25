@@ -115,6 +115,14 @@ public class Recogniser {
     parseCompoundStmt();
   }
 
+  void parseVarDeclList() throws SyntaxError {
+    System.out.println("in parseVarDecl");
+
+    while (isType()) {
+      parseVarDecl();
+    }
+  }
+
   void parseVarDecl() throws SyntaxError {
     System.out.println("in parseVarDecl");
 
@@ -189,6 +197,14 @@ public class Recogniser {
     }
   }
 
+  boolean isType() {
+    System.out.println("in isType");
+    return currentToken.kind == Token.VOID
+          || currentToken.kind == Token.BOOLEAN
+          || currentToken.kind == Token.INT
+          || currentToken.kind == Token.FLOAT;
+  }
+
 // ========================== PARAMETERS ========================
 
   void parseParaList() throws SyntaxError {
@@ -250,14 +266,16 @@ public class Recogniser {
 
     match(Token.LCURLY);
     if (currentToken.kind != Token.RCURLY) {
+      // parseType();
+      // parseIdent();
+      // if (currentToken.kind == Token.LPAREN)
+      parseVarDeclList();
       parseStmtList();
     }
-    System.out.println("before Token.RCURLY");
     match(Token.RCURLY);
-    System.out.println("after Token.RCURLY");
   }
 
- // Here, a new nontermial has been introduced to define { stmt } *
+ // Here, a new nonterminal has been introduced to define { stmt } *
   void parseStmtList() throws SyntaxError {
     System.out.println("in parseStmtList");
 
@@ -271,8 +289,32 @@ public class Recogniser {
 
     switch (currentToken.kind) {
 
+    case Token.LCURLY:
+      parseCompoundStmt();
+      break;
+
+    case Token.IF:
+      parseIfStmt();
+      break;
+
+    case Token.FOR:
+      parseForStmt();
+      break;
+
+    case Token.WHILE:
+      parseWhileStmt();
+      break;
+
+    case Token.BREAK:
+      parseBreakStmt();
+      break;
+
     case Token.CONTINUE:
       parseContinueStmt();
+      break;
+
+    case Token.RETURN:
+      parseReturnStmt();
       break;
 
     default:
@@ -280,6 +322,59 @@ public class Recogniser {
       break;
 
     }
+  }
+
+  void parseIfStmt() throws SyntaxError {
+    System.out.println("in parseIfStmt");
+
+    match(Token.IF);
+    match(Token.LPAREN); // TODO: might need to change to accept() or somethin
+    parseExpr();
+    match(Token.RPAREN);
+    parseStmt();
+    // TODO: check for existence of 'else'
+
+  }
+
+  void parseForStmt() throws SyntaxError {
+    System.out.println("in parseForStmt");
+
+    match(Token.FOR);
+    match(Token.LPAREN); // TODO: might need to change to accept() or somethin
+    parseExpr();
+    if (isExpr()) {
+      parseExpr();
+    }
+    match(Token.SEMICOLON); // TODO: might need to change to accept() or somethin
+    if (isExpr()) {
+      parseExpr();
+    }
+    match(Token.SEMICOLON); // TODO: might need to change to accept() or somethin
+    if (isExpr()) {
+      parseExpr();
+    }
+    match(Token.RPAREN);
+    parseStmt();
+
+  }
+
+  void parseWhileStmt() throws SyntaxError {
+    System.out.println("in parseWhileStmt");
+
+    match(Token.WHILE);
+    match(Token.LPAREN); // TODO: might need to change to accept() or somethin
+    parseExpr();
+    match(Token.RPAREN);
+    parseStmt();
+
+  }
+
+  void parseBreakStmt() throws SyntaxError {
+    System.out.println("in parseBreakStmt");
+
+    match(Token.BREAK);
+    match(Token.SEMICOLON);
+
   }
 
   void parseContinueStmt() throws SyntaxError {
@@ -290,18 +385,40 @@ public class Recogniser {
 
   }
 
+  void parseReturnStmt() throws SyntaxError {
+    System.out.println("in parseReturnStmt");
+
+    match(Token.RETURN);
+    if (isExpr()) {
+      parseExpr();
+    }
+    match(Token.SEMICOLON);
+
+  }
+
   void parseExprStmt() throws SyntaxError {
     System.out.println("in parseExprStmt");
 
-    if (currentToken.kind == Token.ID
-        || currentToken.kind == Token.INTLITERAL
-        || currentToken.kind == Token.MINUS
-        || currentToken.kind == Token.LPAREN) {
+    if (isExpr()) {
         parseExpr();
         match(Token.SEMICOLON);
     } else {
       match(Token.SEMICOLON);
     }
+  }
+
+  boolean isExpr() {
+    System.out.println("in isExpr");
+    return currentToken.kind == Token.ID
+          || currentToken.kind == Token.INT
+          || currentToken.kind == Token.INTLITERAL
+          || currentToken.kind == Token.FLOATLITERAL
+          || currentToken.kind == Token.BOOLEANLITERAL
+          || currentToken.kind == Token.STRINGLITERAL
+          || currentToken.kind == Token.PLUS
+          || currentToken.kind == Token.MINUS
+          || currentToken.kind == Token.NOT
+          || currentToken.kind == Token.LPAREN;
   }
 
 
@@ -343,6 +460,7 @@ public class Recogniser {
   void parseAssignExpr() throws SyntaxError {
     System.out.println("in parseAssignExpr");
 
+    // TODO: change this implementation to fit VC's spec
     parseCondOrExpr();
     while (currentToken.kind == Token.EQ) {
       acceptOperator();
@@ -458,6 +576,18 @@ public class Recogniser {
 
       case Token.INTLITERAL:
         parseIntLiteral();
+        break;
+
+      case Token.FLOATLITERAL:
+        parseFloatLiteral();
+        break;
+
+      case Token.STRINGLITERAL:
+        parseStringLiteral();
+        break;
+
+      case Token.BOOLEANLITERAL:
+        parseBooleanLiteral();
         break;
 
       default:
