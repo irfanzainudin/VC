@@ -1,0 +1,36 @@
+======= The VC compiler =======
+in parseProgram
+#1
+in parseFuncDecl
+in parseType
+in parseIdent
+in parseParaList
+in parseProperParaList
+in parseParaDecl
+in parseType
+in parseDeclarator
+in parseIdent
+in parseCompoundStmt
+#2
+in parseFuncDecl
+in parseType
+in parseIdent
+in parseParaList
+in parseProperParaList
+in parseParaDecl
+in parseType
+in parseDeclarator
+in parseIdent
+in parseIntLiteral
+in parseCompoundStmt
+#3
+in parseFuncDecl
+in parseType
+in parseIdent
+in parseParaList
+in parseCompoundStmt
+in parseStmtList
+in parseStmt
+in parseExprStmt
+ERROR: 8(5)..8(7): ";" expected here
+Compilation was unsuccessful.

@@ -1,0 +1,13 @@
+======= The VC compiler =======
+in parseProgram
+#1
+in parseFuncDecl
+in parseType
+in parseIdent
+in parseParaList
+in parseCompoundStmt
+in parseStmtList
+in parseStmt
+in parseExprStmt
+ERROR: 2(1)..2(3): ";" expected here
+Compilation was unsuccessful.

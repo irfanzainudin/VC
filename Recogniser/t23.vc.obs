@@ -1,0 +1,48 @@
+======= The VC compiler =======
+in parseProgram
+#1
+in parseFuncDecl
+in parseType
+in parseIdent
+in parseParaList
+in parseCompoundStmt
+in parseStmtList
+in parseStmt
+in parseExprStmt
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+in parseIdent
+in parseArgList
+in parseProperArgList
+in parseArg
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+in parseIntLiteral
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+ERROR: 4(14)..4(14): illegal parimary expression
+Compilation was unsuccessful.

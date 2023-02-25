@@ -1,0 +1,46 @@
+======= The VC compiler =======
+in parseProgram
+#1
+in parseFuncDecl
+in parseType
+in parseIdent
+in parseParaList
+in parseCompoundStmt
+in parseStmtList
+in parseStmt
+in parseExprStmt
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+in parseIdent
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+in parseIntLiteral
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+in parseIntLiteral
+ERROR: 2(9)..2(9): ")" expected here
+Compilation was unsuccessful.
