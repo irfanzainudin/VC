@@ -94,7 +94,13 @@ public class Recogniser {
       int i = 1;
       while (currentToken.kind != Token.EOF) {
         System.out.println("#" + Integer.toString(i));
-        parseFuncDecl();
+        parseType();
+        parseIdent();
+        if (currentToken.kind == Token.LPAREN) {
+          parseFuncDecl();
+        } else {
+          parseVarDeclList();
+        }
         i += 1;
       }
       if (currentToken.kind != Token.EOF) {
@@ -109,15 +115,16 @@ public class Recogniser {
   void parseFuncDecl() throws SyntaxError {
     System.out.println("in parseFuncDecl");
 
-    parseType();
-    parseIdent();
+    // parseType();
+    // parseIdent();
     parseParaList();
     parseCompoundStmt();
   }
 
   void parseVarDeclList() throws SyntaxError {
-    System.out.println("in parseVarDecl");
+    System.out.println("in parseVarDeclList");
 
+    parseVarDecl();
     while (isType()) {
       parseVarDecl();
     }
@@ -126,7 +133,7 @@ public class Recogniser {
   void parseVarDecl() throws SyntaxError {
     System.out.println("in parseVarDecl");
 
-    parseType();
+    // parseType();
     parseInitDeclaratorList();
     match(Token.SEMICOLON);
   }
@@ -153,7 +160,7 @@ public class Recogniser {
   void parseDeclarator() throws SyntaxError {
     System.out.println("in parseDeclarator");
 
-    parseIdent();
+    // parseIdent(); // already parsed in parseProgram()
     if (currentToken.kind == Token.LBRACKET) {
       match(Token.LBRACKET); // TODO: might need to change to accept or somethin
       if (currentToken.kind != Token.RBRACKET) {
