@@ -1,36 +1,59 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "f", position = 1(5)..1(5)
+in parseFuncDecl
 in parseParaList
 in parseProperParaList
 in parseParaDecl
 in parseType
 in parseDeclarator
 in parseIdent
+Kind = 33 [<id>], spelling = "a", position = 1(11)..1(11)
 in parseCompoundStmt
 #2
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "g", position = 4(5)..4(5)
+in parseFuncDecl
 in parseParaList
 in parseProperParaList
 in parseParaDecl
 in parseType
 in parseDeclarator
 in parseIdent
+Kind = 33 [<id>], spelling = "a", position = 4(11)..4(11)
 in parseIntLiteral
 in parseCompoundStmt
 #3
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "main", position = 7(6)..7(9)
+in parseFuncDecl
 in parseParaList
 in parseCompoundStmt
-in parseStmtList
-in parseStmt
-in parseExprStmt
-ERROR: 8(5)..8(7): ";" expected here
+in isType
+in parseType
+in parseVarDecl
+in parseInitDeclaratorList
+in parseInitDeclarator
+in parseDeclarator
+in parseIdent
+Kind = 33 [<id>], spelling = "a", position = 8(9)..8(9)
+in parseIntLiteral
+in parseInitialiser
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 17 [=], spelling = "=", position = 8(15)..8(15)
+ERROR: 8(15)..8(15): illegal primary expression
 Compilation was unsuccessful.

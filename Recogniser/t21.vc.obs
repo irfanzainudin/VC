@@ -1,14 +1,17 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "A", position = 2(6)..2(6)
+in parseFuncDecl
 in parseParaList
 in parseCompoundStmt
+in isType
 in parseStmtList
 in parseStmt
 in parseExprStmt
+in isExpr
 in parseExpr
 in parseAssignExpr
 in parseCondOrExpr
@@ -19,14 +22,33 @@ in parseAdditiveExpr
 in parseMultiplicativeExpr
 in parseUnaryExpr
 in parsePrimaryExpr
+Kind = 33 [<id>], spelling = "i", position = 4(3)..4(3)
 in parseIdent
+Kind = 33 [<id>], spelling = "i", position = 4(3)..4(3)
 in parseOperator
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
 in parseAdditiveExpr
 in parseMultiplicativeExpr
 in parseUnaryExpr
 in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "10", position = 4(7)..4(8)
 in parseIntLiteral
 in parseStmt
 in parseExprStmt
-ERROR: 5(3)..5(5): ";" expected here
+in isExpr
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 7 [int], spelling = "int", position = 5(3)..5(5)
+ERROR: 5(3)..5(5): illegal primary expression
 Compilation was unsuccessful.

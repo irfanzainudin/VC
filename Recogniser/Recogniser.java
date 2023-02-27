@@ -99,7 +99,7 @@ public class Recogniser {
         if (currentToken.kind == Token.LPAREN) {
           parseFuncDecl();
         } else {
-          parseVarDeclList();
+          parseVarDecl();
         }
         i += 1;
       }
@@ -121,20 +121,21 @@ public class Recogniser {
     parseCompoundStmt();
   }
 
-  void parseVarDeclList() throws SyntaxError {
-    System.out.println("in parseVarDeclList");
+  // void parseVarDeclList() throws SyntaxError {
+  //   System.out.println("in parseVarDeclList");
 
-    parseVarDecl();
-    while (isType()) {
-      parseVarDecl();
-    }
-  }
+  //   parseVarDecl();
+  //   while (isType()) {
+  //     parseVarDecl();
+  //   }
+  // }
 
   void parseVarDecl() throws SyntaxError {
     System.out.println("in parseVarDecl");
 
     // parseType();
     parseInitDeclaratorList();
+    System.out.println("after parseInitDeclList()");
     match(Token.SEMICOLON);
   }
 
@@ -159,8 +160,11 @@ public class Recogniser {
 
   void parseDeclarator() throws SyntaxError {
     System.out.println("in parseDeclarator");
+    
+    if (currentToken.kind == Token.ID) {
+      parseIdent();
+    }
 
-    // parseIdent(); // already parsed in parseProgram()
     if (currentToken.kind == Token.LBRACKET) {
       match(Token.LBRACKET); // TODO: might need to change to accept or somethin
       if (currentToken.kind != Token.RBRACKET) {
@@ -272,12 +276,14 @@ public class Recogniser {
     System.out.println("in parseCompoundStmt");
 
     match(Token.LCURLY);
-    if (currentToken.kind != Token.RCURLY) {
-      // parseType();
-      // parseIdent();
-      // if (currentToken.kind == Token.LPAREN)
-      parseVarDeclList();
-      parseStmtList();
+    while (currentToken.kind != Token.RCURLY) {
+      System.out.println(currentToken.kind);
+      if (isType()) {
+        parseType();
+        parseVarDecl();
+      } else {
+        parseStmtList();
+      }
     }
     match(Token.RCURLY);
   }
@@ -499,7 +505,7 @@ public class Recogniser {
     System.out.println("in parseEqualityExpr");
 
     parseRelExpr();
-    while (currentToken.kind == Token.EQEQ) {
+    while (currentToken.kind == Token.EQEQ || currentToken.kind == Token.NOTEQ) {
       acceptOperator();
       parseRelExpr();
     }
@@ -509,7 +515,7 @@ public class Recogniser {
     System.out.println("in parseRelExpr");
 
     parseAdditiveExpr();
-    while (currentToken.kind == Token.EQ) {
+    while (currentToken.kind == Token.LT || currentToken.kind == Token.LTEQ || currentToken.kind == Token.GT || currentToken.kind == Token.GTEQ) {
       acceptOperator();
       parseAdditiveExpr();
     }
@@ -519,7 +525,7 @@ public class Recogniser {
     System.out.println("in parseAdditiveExpr");
 
     parseMultiplicativeExpr();
-    while (currentToken.kind == Token.PLUS) {
+    while (currentToken.kind == Token.PLUS || currentToken.kind == Token.MINUS) {
       acceptOperator();
       parseMultiplicativeExpr();
     }
@@ -529,7 +535,7 @@ public class Recogniser {
     System.out.println("in parseMultiplicativeExpr");
 
     parseUnaryExpr();
-    while (currentToken.kind == Token.MULT) {
+    while (currentToken.kind == Token.MULT || currentToken.kind == Token.DIV) {
       acceptOperator();
       parseUnaryExpr();
     }
@@ -539,7 +545,9 @@ public class Recogniser {
     System.out.println("in parseUnaryExpr");
 
     switch (currentToken.kind) {
+      case Token.PLUS:
       case Token.MINUS:
+      case Token.NOT:
         {
           acceptOperator();
           parseUnaryExpr();

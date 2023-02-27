@@ -1,14 +1,17 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "main", position = 2(6)..2(9)
+in parseFuncDecl
 in parseParaList
 in parseCompoundStmt
+in isType
 in parseStmtList
 in parseStmt
 in parseExprStmt
+in isExpr
 in parseExpr
 in parseAssignExpr
 in parseCondOrExpr
@@ -19,7 +22,9 @@ in parseAdditiveExpr
 in parseMultiplicativeExpr
 in parseUnaryExpr
 in parsePrimaryExpr
+Kind = 33 [<id>], spelling = "If", position = 4(3)..4(4)
 in parseIdent
+Kind = 33 [<id>], spelling = "If", position = 4(3)..4(4)
 in parseArgList
 in parseProperArgList
 in parseArg
@@ -33,16 +38,7 @@ in parseAdditiveExpr
 in parseMultiplicativeExpr
 in parseUnaryExpr
 in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "100", position = 4(7)..4(9)
 in parseIntLiteral
-in parseExpr
-in parseAssignExpr
-in parseCondOrExpr
-in parseCondAndExpr
-in parseEqualityExpr
-in parseRelExpr
-in parseAdditiveExpr
-in parseMultiplicativeExpr
-in parseUnaryExpr
-in parsePrimaryExpr
-ERROR: 4(14)..4(14): illegal parimary expression
+ERROR: 4(12)..4(12): ";" expected here
 Compilation was unsuccessful.

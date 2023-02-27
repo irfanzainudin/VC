@@ -1,9 +1,24 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
-in parseParaList
-ERROR: 1(7)..1(7): "(" expected here
+Kind = 33 [<id>], spelling = "a", position = 1(5)..1(5)
+in parseVarDecl
+in parseInitDeclaratorList
+in parseInitDeclarator
+in parseDeclarator
+in parseInitialiser
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 17 [=], spelling = "=", position = 1(7)..1(7)
+ERROR: 1(7)..1(7): illegal primary expression
 Compilation was unsuccessful.

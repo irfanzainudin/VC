@@ -1,21 +1,24 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "A", position = 1(6)..1(6)
+in parseFuncDecl
 in parseParaList
 in parseCompoundStmt
 #2
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "B", position = 2(5)..2(5)
+in parseFuncDecl
 in parseParaList
 in parseCompoundStmt
 #3
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "C", position = 3(7)..3(7)
+in parseFuncDecl
 in parseParaList
 in parseCompoundStmt
 Compilation was successful.

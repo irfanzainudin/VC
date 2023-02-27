@@ -1,9 +1,10 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "A", position = 1(6)..1(6)
+in parseFuncDecl
 in parseParaList
 in parseCompoundStmt
 Compilation was successful.

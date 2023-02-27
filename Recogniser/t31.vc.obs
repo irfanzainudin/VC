@@ -1,13 +1,19 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "main", position = 3(6)..3(9)
+in parseFuncDecl
 in parseParaList
 in parseCompoundStmt
-in parseStmtList
-in parseStmt
-in parseExprStmt
-ERROR: 4(5)..4(7): ";" expected here
+in isType
+in parseType
+in parseVarDecl
+in parseInitDeclaratorList
+in parseInitDeclarator
+in parseDeclarator
+in parseIdent
+Kind = 33 [<id>], spelling = "n", position = 4(9)..4(9)
+ERROR: 5(5)..5(7): "}" expected here
 Compilation was unsuccessful.

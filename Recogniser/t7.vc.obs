@@ -1,9 +1,129 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "i", position = 1(5)..1(5)
+in parseVarDecl
+in parseInitDeclaratorList
+in parseInitDeclarator
+in parseDeclarator
+#2
+in parseType
+in parseIdent
+Kind = 33 [<id>], spelling = "A", position = 3(6)..3(6)
+in parseFuncDecl
 in parseParaList
-ERROR: 1(6)..1(6): "(" expected here
-Compilation was unsuccessful.
+in parseCompoundStmt
+in isType
+in parseStmtList
+in parseStmt
+in parseExprStmt
+in isExpr
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "1", position = 9(1)..9(1)
+in parseIntLiteral
+in parseOperator
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "2", position = 9(5)..9(5)
+in parseIntLiteral
+in parseOperator
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 33 [<id>], spelling = "a", position = 9(9)..9(9)
+in parseIdent
+Kind = 33 [<id>], spelling = "a", position = 9(9)..9(9)
+in parseStmt
+in parseExprStmt
+in isExpr
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "1", position = 11(1)..11(1)
+in parseIntLiteral
+in parseOperator
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "2", position = 11(6)..11(6)
+in parseIntLiteral
+in parseOperator
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "1", position = 11(10)..11(10)
+in parseIntLiteral
+in parseOperator
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "2", position = 11(14)..11(14)
+in parseIntLiteral
+in parseStmt
+in parseExprStmt
+in isExpr
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "1", position = 13(1)..13(1)
+in parseIntLiteral
+in parseOperator
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "2", position = 13(5)..13(5)
+in parseIntLiteral
+in parseOperator
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "3", position = 13(9)..13(9)
+in parseIntLiteral
+Compilation was successful.

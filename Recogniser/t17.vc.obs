@@ -1,14 +1,17 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "A", position = 1(5)..1(5)
+in parseFuncDecl
 in parseParaList
 in parseCompoundStmt
+in isType
 in parseStmtList
 in parseStmt
 in parseExprStmt
+in isExpr
 in parseExpr
 in parseAssignExpr
 in parseCondOrExpr
@@ -19,7 +22,9 @@ in parseAdditiveExpr
 in parseMultiplicativeExpr
 in parseUnaryExpr
 in parsePrimaryExpr
+Kind = 33 [<id>], spelling = "a", position = 2(1)..2(1)
 in parseIdent
+Kind = 33 [<id>], spelling = "a", position = 2(1)..2(1)
 in parseExpr
 in parseAssignExpr
 in parseCondOrExpr
@@ -30,9 +35,9 @@ in parseAdditiveExpr
 in parseMultiplicativeExpr
 in parseUnaryExpr
 in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "1", position = 2(3)..2(3)
 in parseIntLiteral
-in parseExpr
-in parseAssignExpr
+in parseOperator
 in parseCondOrExpr
 in parseCondAndExpr
 in parseEqualityExpr
@@ -41,6 +46,6 @@ in parseAdditiveExpr
 in parseMultiplicativeExpr
 in parseUnaryExpr
 in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "1", position = 2(8)..2(8)
 in parseIntLiteral
-ERROR: 2(9)..2(9): ")" expected here
-Compilation was unsuccessful.
+Compilation was successful.

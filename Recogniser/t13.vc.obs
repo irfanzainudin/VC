@@ -1,18 +1,60 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "fact", position = 1(5)..1(8)
+in parseFuncDecl
 in parseParaList
 in parseProperParaList
 in parseParaDecl
 in parseType
 in parseDeclarator
 in parseIdent
+Kind = 33 [<id>], spelling = "n", position = 1(14)..1(14)
 in parseCompoundStmt
+in isType
 in parseStmtList
 in parseStmt
+in parseIfStmt
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 33 [<id>], spelling = "n", position = 2(7)..2(7)
+in parseIdent
+Kind = 33 [<id>], spelling = "n", position = 2(7)..2(7)
+in parseOperator
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "0", position = 2(12)..2(12)
+in parseIntLiteral
+in parseStmt
+in parseReturnStmt
+in isExpr
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "1", position = 3(12)..3(12)
+in parseIntLiteral
+in parseStmt
 in parseExprStmt
-ERROR: 2(3)..2(4): ";" expected here
+in isExpr
+ERROR: 4(3)..4(6): ";" expected here
 Compilation was unsuccessful.

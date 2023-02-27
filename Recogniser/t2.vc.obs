@@ -1,14 +1,17 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "A", position = 1(6)..1(6)
+in parseFuncDecl
 in parseParaList
 in parseCompoundStmt
+in isType
 in parseStmtList
 in parseStmt
 in parseExprStmt
+in isExpr
 in parseExpr
 in parseAssignExpr
 in parseCondOrExpr
@@ -19,27 +22,47 @@ in parseAdditiveExpr
 in parseMultiplicativeExpr
 in parseUnaryExpr
 in parsePrimaryExpr
+Kind = 33 [<id>], spelling = "a", position = 2(3)..2(3)
 in parseIdent
+Kind = 33 [<id>], spelling = "a", position = 2(3)..2(3)
 in parseOperator
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
 in parseAdditiveExpr
 in parseMultiplicativeExpr
 in parseUnaryExpr
 in parsePrimaryExpr
+Kind = 33 [<id>], spelling = "b", position = 2(7)..2(7)
 in parseIdent
+Kind = 33 [<id>], spelling = "b", position = 2(7)..2(7)
 in parseOperator
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
 in parseAdditiveExpr
 in parseMultiplicativeExpr
 in parseUnaryExpr
 in parsePrimaryExpr
+Kind = 33 [<id>], spelling = "c", position = 2(11)..2(11)
 in parseIdent
+Kind = 33 [<id>], spelling = "c", position = 2(11)..2(11)
 in parseOperator
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
 in parseAdditiveExpr
 in parseMultiplicativeExpr
 in parseUnaryExpr
 in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "10", position = 2(15)..2(16)
 in parseIntLiteral
 in parseStmt
 in parseExprStmt
+in isExpr
 in parseExpr
 in parseAssignExpr
 in parseCondOrExpr
@@ -50,5 +73,7 @@ in parseAdditiveExpr
 in parseMultiplicativeExpr
 in parseUnaryExpr
 in parsePrimaryExpr
+Kind = 33 [<id>], spelling = "a", position = 3(3)..3(3)
 in parseIdent
+Kind = 33 [<id>], spelling = "a", position = 3(3)..3(3)
 Compilation was successful.

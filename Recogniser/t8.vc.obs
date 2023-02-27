@@ -1,13 +1,41 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "f", position = 1(9)..1(9)
+in parseFuncDecl
 in parseParaList
 in parseCompoundStmt
+in isType
 in parseStmtList
 in parseStmt
 in parseExprStmt
-ERROR: 2(2)..2(2): ";" expected here
-Compilation was unsuccessful.
+in isExpr
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parseOperator
+in parseUnaryExpr
+in parseOperator
+in parseUnaryExpr
+in parseOperator
+in parseUnaryExpr
+in parseOperator
+in parseUnaryExpr
+in parseOperator
+in parseUnaryExpr
+in parseOperator
+in parseUnaryExpr
+in parseOperator
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 36 [<boolean-literal>], spelling = "true", position = 2(9)..2(12)
+in parseBooleanLit
+Compilation was successful.

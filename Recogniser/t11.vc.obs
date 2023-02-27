@@ -1,13 +1,86 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "A", position = 1(5)..1(5)
+in parseFuncDecl
 in parseParaList
 in parseCompoundStmt
+in isType
+in parseStmtList
+in parseStmt
+in parseIfStmt
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 33 [<id>], spelling = "a", position = 3(7)..3(7)
+in parseIdent
+Kind = 33 [<id>], spelling = "a", position = 3(7)..3(7)
+in parseStmt
+in parseCompoundStmt
+in isType
 in parseStmtList
 in parseStmt
 in parseExprStmt
-ERROR: 3(3)..3(4): ";" expected here
+in isExpr
+in parseExpr
+in parseAssignExpr
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 33 [<id>], spelling = "a", position = 4(5)..4(5)
+in parseIdent
+Kind = 33 [<id>], spelling = "a", position = 4(5)..4(5)
+in parseOperator
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 33 [<id>], spelling = "b", position = 4(9)..4(9)
+in parseIdent
+Kind = 33 [<id>], spelling = "b", position = 4(9)..4(9)
+in parseOperator
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 33 [<id>], spelling = "c", position = 4(13)..4(13)
+in parseIdent
+Kind = 33 [<id>], spelling = "c", position = 4(13)..4(13)
+in parseOperator
+in parseCondOrExpr
+in parseCondAndExpr
+in parseEqualityExpr
+in parseRelExpr
+in parseAdditiveExpr
+in parseMultiplicativeExpr
+in parseUnaryExpr
+in parsePrimaryExpr
+Kind = 34 [<int-literal>], spelling = "10", position = 4(17)..4(18)
+in parseIntLiteral
+in parseStmt
+in parseExprStmt
+in isExpr
+ERROR: 5(5)..5(8): ";" expected here
 Compilation was unsuccessful.

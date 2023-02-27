@@ -1,14 +1,16 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 in parseIdent
+Kind = 33 [<id>], spelling = "A", position = 2(6)..2(6)
+in parseFuncDecl
 in parseParaList
 in parseProperParaList
 in parseParaDecl
 in parseType
 in parseDeclarator
 in parseIdent
+Kind = 33 [<id>], spelling = "i", position = 2(12)..2(12)
 ERROR: 2(13)..2(13): ")" expected here
 Compilation was unsuccessful.

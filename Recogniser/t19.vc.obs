@@ -1,7 +1,6 @@
 ======= The VC compiler =======
 in parseProgram
 #1
-in parseFuncDecl
 in parseType
 ERROR: 2(1)..2(1): "float" expected here
 Compilation was unsuccessful.
